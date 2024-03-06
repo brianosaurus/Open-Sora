@@ -119,7 +119,8 @@ def main(args):
     # Step 4: Create DiT and EMA
     model = DiT_models[args.model](**model_kwargs).to(get_current_device())
     patch_size = model.patch_size
-    ema = deepcopy(model)
+    #ema = deepcopy(model)
+    ema = DiT_models[args.model](**model_kwargs).to(get_current_device())
     requires_grad(ema, False)
 
     model.train()  # important! This enables embedding dropout for classifier-free guidance
