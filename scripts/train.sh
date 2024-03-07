@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # get args
-GPUS=${1:-8}
+GPUS=1
 
 # get root dir
 FOLDER_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
